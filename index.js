@@ -130,3 +130,20 @@ for (var i = 1; i < finances.length; i++) {
     maxIncreaseMonth = finances[i][0];
   }
 }
+
+// The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period.
+
+var maxDecrease = 0;
+var maxDecreaseMonth = "";
+
+for (var i = 1; i < finances.length; i++) {
+  var currentAmount = finances[i][1];
+  var previousAmount = finances[i - 1][1];
+  var decrease = previousAmount - currentAmount;
+
+  if (decrease > maxDecrease) {
+    maxDecrease = decrease;
+    maxDecreaseMonth = finances[i][0];
+  }
+}
+maxDecrease = -maxDecrease;
