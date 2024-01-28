@@ -89,4 +89,12 @@ var finances = [
 
 // The total number of months included in the dataset.
 
-const numberOfMonths = finances.length;
+var numberOfMonths = finances.length;
+
+
+// The net total amount of Profit/Losses over the entire period.
+
+var total = 0;
+for (var i = 0; i < finances.length; i++) {
+  total += finances[i][1];
+}
