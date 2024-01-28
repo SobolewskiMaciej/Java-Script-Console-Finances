@@ -147,3 +147,19 @@ for (var i = 1; i < finances.length; i++) {
   }
 }
 maxDecrease = -maxDecrease;
+
+//Format consol.log with a new line
+
+console.log(
+  "Financial Analysis\n__________________\nTotal Months:",
+  numberOfMonths + "\nTotal: " + "$" + total + "\nAverage Change:",
+  averageChange.toFixed(2) + "\nGreatest Increase in Profits/Losses:",
+  maxIncreaseMonth +
+    "\n" +
+    "(" +
+    "$" +
+    maxIncrease +
+    ")" +
+    "\nGreatest Decrease in Profits/Losses:",
+  maxDecreaseMonth + "\n" + "(" + "$" + maxDecrease + ")"
+);
