@@ -115,3 +115,18 @@ var averageChange = totalChange / (finances.length - 1);
 
 
 
+// The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period.
+
+var maxIncrease = 0;
+var maxIncreaseMonth = "";
+
+for (var i = 1; i < finances.length; i++) {
+  var currentAmount = finances[i][1];
+  var previousAmount = finances[i - 1][1];
+  var increase = currentAmount - previousAmount;
+
+  if (increase > maxIncrease) {
+    maxIncrease = increase;
+    maxIncreaseMonth = finances[i][0];
+  }
+}
