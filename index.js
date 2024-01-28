@@ -98,3 +98,20 @@ var total = 0;
 for (var i = 0; i < finances.length; i++) {
   total += finances[i][1];
 }
+
+
+// The average of the **changes** in Profit/Losses over the entire period.
+
+var totalChange = 0;
+
+for (var i = 1; i < finances.length; i++) {
+  var currentAmount = finances[i][1];
+  var previousAmount = finances[i - 1][1];
+  var change = currentAmount - previousAmount;
+  totalChange += change;
+}
+
+var averageChange = totalChange / (finances.length - 1);
+
+
+
